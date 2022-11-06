@@ -1,0 +1,20 @@
+@font-face {
+    font-family: OhouseIcon;
+    src: url(https://assets.ohou.se/design-system/d58c56ae81c4f3dc.eot);
+    src: url(https://assets.ohou.se/design-system/d58c56ae81c4f3dc.eot#iefix) format("embedded-opentype"), 
+    url(https://assets.ohou.se/design-system/fe942d0827987378.woff2) format("woff2"), 
+    url(https://assets.ohou.se/design-system/953ee690ff7f7f63.woff) format("woff"), 
+    url(https://assets.ohou.se/design-system/27b313c40dcf35e5.ttf) format("truetype"), 
+    url(https://assets.ohou.se/design-system/fb9f1de04c1cb6b2.svg#OhouseIcon) format("svg");
+}
+
+@font-face{font-family:OhouseSans;font-weight:700;src:url(https://assets.ohou.se/design-system/b3f31cd4248f404e.woff2) format("woff2"),url(https://assets.ohou.se/design-system/0f909ac06f35e6b3.otf#iefix) format("opentype"),url(https://assets.ohou.se/design-system/858f79a098e9eabb.woff) format("woff"),url(https://assets.ohou.se/design-system/0f909ac06f35e6b3.otf) format("opentype"),url(https://assets.ohou.se/design-system/5bc99f879812c352.ttf) format("truetype");}@font-face{font-family:OhouseSans;font-weight:500;src:url(https://assets.ohou.se/design-system/c168d3c43da800c2.woff2) format("woff2"),url(https://assets.ohou.se/design-system/1a838f271a125273.otf#iefix) format("opentype"),url(https://assets.ohou.se/design-system/5f4bd9b03223c556.woff) format("woff"),url(https://assets.ohou.se/design-system/1a838f271a125273.otf) format("opentype"),url(https://assets.ohou.se/design-system/161f1f22a19b05fb.ttf) format("truetype");}@font-face{font-family:OhouseSans;font-weight:400;src:url(https://assets.ohou.se/design-system/8cc79ae1ff7b3e5a.woff2) format("woff2"),url(https://assets.ohou.se/design-system/ba62a407902a9ffd.otf#iefix) format("opentype"),url(https://assets.ohou.se/design-system/91ea937079bb0cc1.woff) format("woff"),url(https://assets.ohou.se/design-system/ba62a407902a9ffd.otf) format("opentype"),url(https://assets.ohou.se/design-system/4f8e060bee1f0dc4.ttf) format("truetype");}html{font-family:OhouseSans,sans-serif;}
+
+*{margin:0;padding:0;font:inherit;color:inherit;}
+*, :after, :before {box-sizing:border-box;flex-shrink:0;}
+html, body {height: 100%;}
+ul{list-style: none;}
+img, picture, video, canvas, svg {display: block; max-width:100%;}
+button {background:none;border:0;cursor:pointer;}
+a {text-decoration:none; color: inherit;}
+table {border-collapse:collapse;border-spacing:0}

@@ -1,0 +1,19 @@
+:root{}
+
+.blind{position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); margin: -1px;}
+
+.body,html{font-family:'OhouseSans','Noto Sans KR','AppleSDGothicNeo','Malgun Gothic',sans-serif; color: #2f3438; letter-spacing: -.4px;}
+
+.header-top .util-area .link-search::before,
+.header-top .util-area .link-cart::before,
+.header-top .btn-menu::before,
+.footer-top .link-cs .cs-arrow::before,
+.menu-area .community .wrap .icon-wrap .icon:before,
+.menu-area .store .wrap .icon-wrap .icon:before,
+.menu-area .move .wrap .icon-wrap .icon:before,
+.menu-area .depth .close-arrow::before,
+.menu-area .depth .open-arrow,
+.event .fraction .link::before{
+    font-family: OhouseIcon;
+    vertical-align: top;
+}

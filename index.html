@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <title>오늘의집</title>
+
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" sizes="16x16">
+    <link rel="stylesheet" href="./asset/css/layout.css">
+    <link rel="stylesheet" href="./asset/css/main.css">
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/ScrollTrigger.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script defer src="./asset/js/script.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header-top">
+                <h1 class="logo">
+                    <a href="" class="link-logo" aria-label="오늘의집 로고">
+                        <svg class="logo" width="74" height="30" viewBox="0 0 74 30" preserveAspectRatio="xMidYMid meet"><g fill="none" fill-rule="evenodd"><path fill="#000" d="M14.2 25.17H9.28V20.7a1.45 1.45 0 0 0-2.9 0v4.47H1.44a1.45 1.45 0 1 0 0 2.9H14.2a1.45 1.45 0 0 0 0-2.9M4.5 9.15c0-4.6 2.08-5.28 3.33-5.28 1.24 0 3.33.69 3.33 5.28v.36c0 4.6-2.09 5.28-3.33 5.28-1.25 0-3.34-.69-3.34-5.28v-.36zm3.33 8.54c3.84 0 6.23-3.13 6.23-8.18v-.36c0-5.05-2.39-8.18-6.23-8.18-3.85 0-6.24 3.13-6.24 8.18v.36c0 5.05 2.39 8.19 6.24 8.19zm25.54-7.34H17.81a1.45 1.45 0 0 0 0 2.9h15.56a1.45 1.45 0 1 0 0-2.9m-1.55 15.5c-7.08 1.83-9.45.79-10.14.25-.45-.35-.65-.8-.65-1.48v-.87h10.25c.8 0 1.46-.65 1.46-1.45v-5.08c0-.8-.66-1.45-1.46-1.45h-11.7a1.45 1.45 0 1 0 0 2.9h10.25v2.18H19.57c-.8 0-1.45.65-1.45 1.45v2.32a4.6 4.6 0 0 0 1.78 3.78c1.2.93 2.94 1.39 5.21 1.39 2.05 0 4.54-.38 7.44-1.13a1.45 1.45 0 1 0-.73-2.82M20.3 7.83h10.8a1.45 1.45 0 1 0 0-2.9h-9.35V1.45a1.45 1.45 0 1 0-2.9 0v4.93c0 .8.65 1.45 1.45 1.45"></path><rect width="3" height="15" x="70" fill="#000" rx="1.5"></rect><path fill="#000" d="M64.5 13.28a1.45 1.45 0 0 0 2.73-1c-.05-.13-1-2.68-3.38-4.5l3.7-4.1a1.45 1.45 0 0 0-1.09-2.42h-9.05a1.45 1.45 0 1 0 0 2.9h5.8l-6.88 7.64a1.45 1.45 0 1 0 2.16 1.95l3.41-3.8a8 8 0 0 1 2.6 3.33M69.56 26.52h-7.01a.82.82 0 0 1-.82-.82v-1.95h8.65v1.95c0 .45-.37.82-.82.82m2.27-9.37c-.8 0-1.45.65-1.45 1.45v2.25h-8.65V18.6a1.45 1.45 0 1 0-2.9 0v7.1a3.73 3.73 0 0 0 3.72 3.72h7.01a3.73 3.73 0 0 0 3.72-3.72v-7.1c0-.8-.65-1.45-1.45-1.45M42.46 3.87c2.22 0 2.33 4.24 2.33 5.08 0 .85-.11 5.09-2.33 5.09-2.21 0-2.32-4.24-2.32-5.08 0-.86.11-5.09 2.32-5.09m0 13.07c1.76 0 3.23-.93 4.14-2.62.71-1.34 1.1-3.2 1.1-5.36s-.39-4.02-1.1-5.37A4.6 4.6 0 0 0 42.46.97c-1.76 0-3.22.93-4.13 2.62-.72 1.35-1.1 3.2-1.1 5.37s.38 4.01 1.1 5.36a4.59 4.59 0 0 0 4.13 2.62"></path><path fill="#000" d="M51.4.49c-.8 0-1.45.65-1.45 1.45v17.78c-1.93.6-5.75 1.13-10.38 1.13h-2.2a1.45 1.45 0 0 0 0 2.9h2.2c2.64 0 7.21-.23 10.38-1.02v4.84a1.45 1.45 0 0 0 2.9 0V1.94c0-.8-.65-1.45-1.45-1.45"></path></g></svg>
+                    </a>
+                </h1>
+                <a href="" class="btn-menu" aria-label="메뉴열기"></a>
+                <div class="util-area">
+                    <a href="" class="util-item link-search" aria-label="검색하기"></a>
+                    <a href="" class="util-item link-cart" aria-label="장바구니담기"></a>
+                </div>
+            </div>
+            <nav class="header-bottom">
+                <ul class="gnb-list">
+                    <li class="gnb-item"><a href="" class="link-more active">홈</a></li>
+                    <li class="gnb-item"><a href="" class="link-more">팔로잉</a></li>
+                    <li class="gnb-item"><a href="" class="link-more">사진</a></li>
+                    <li class="gnb-item"><a href="" class="link-more">집들이</a></li>
+                    <li class="gnb-item"><a href="" class="link-more">노하우</a></li>
+                    <li class="gnb-item"><a href="" class="link-more">전문가집들이</a></li>
+                    <li class="gnb-item"><a href="" class="link-more">셀프가이드</a></li>
+                    <li class="gnb-item"><a href="" class="link-more">질문과답변</a></li>
+                    <li class="gnb-item"><a href="" class="link-more interior">3D인테리어<span>BETA</span></a></li>
+                    <li class="gnb-item"><a href="" class="link-more">이벤트</a></li>
+                </ul>
+            </nav>
+
+            <div class="menu">
+                <div class="dimmed"></div>
+                <div class="menu-inner">
+                    <div class="app">
+                        <a href="" class="link-sub-logo" aria-label="서브메뉴로고">
+                            <svg class="css-bsbra5" width="74" height="26" viewBox="0 0 74 30" preserveAspectRatio="xMidYMid meet"><g fill="none" fill-rule="evenodd"><path fill="#000" d="M14.2 25.17H9.28V20.7a1.45 1.45 0 0 0-2.9 0v4.47H1.44a1.45 1.45 0 1 0 0 2.9H14.2a1.45 1.45 0 0 0 0-2.9M4.5 9.15c0-4.6 2.08-5.28 3.33-5.28 1.24 0 3.33.69 3.33 5.28v.36c0 4.6-2.09 5.28-3.33 5.28-1.25 0-3.34-.69-3.34-5.28v-.36zm3.33 8.54c3.84 0 6.23-3.13 6.23-8.18v-.36c0-5.05-2.39-8.18-6.23-8.18-3.85 0-6.24 3.13-6.24 8.18v.36c0 5.05 2.39 8.19 6.24 8.19zm25.54-7.34H17.81a1.45 1.45 0 0 0 0 2.9h15.56a1.45 1.45 0 1 0 0-2.9m-1.55 15.5c-7.08 1.83-9.45.79-10.14.25-.45-.35-.65-.8-.65-1.48v-.87h10.25c.8 0 1.46-.65 1.46-1.45v-5.08c0-.8-.66-1.45-1.46-1.45h-11.7a1.45 1.45 0 1 0 0 2.9h10.25v2.18H19.57c-.8 0-1.45.65-1.45 1.45v2.32a4.6 4.6 0 0 0 1.78 3.78c1.2.93 2.94 1.39 5.21 1.39 2.05 0 4.54-.38 7.44-1.13a1.45 1.45 0 1 0-.73-2.82M20.3 7.83h10.8a1.45 1.45 0 1 0 0-2.9h-9.35V1.45a1.45 1.45 0 1 0-2.9 0v4.93c0 .8.65 1.45 1.45 1.45"></path><rect width="3" height="15" x="70" fill="#000" rx="1.5"></rect><path fill="#000" d="M64.5 13.28a1.45 1.45 0 0 0 2.73-1c-.05-.13-1-2.68-3.38-4.5l3.7-4.1a1.45 1.45 0 0 0-1.09-2.42h-9.05a1.45 1.45 0 1 0 0 2.9h5.8l-6.88 7.64a1.45 1.45 0 1 0 2.16 1.95l3.41-3.8a8 8 0 0 1 2.6 3.33M69.56 26.52h-7.01a.82.82 0 0 1-.82-.82v-1.95h8.65v1.95c0 .45-.37.82-.82.82m2.27-9.37c-.8 0-1.45.65-1.45 1.45v2.25h-8.65V18.6a1.45 1.45 0 1 0-2.9 0v7.1a3.73 3.73 0 0 0 3.72 3.72h7.01a3.73 3.73 0 0 0 3.72-3.72v-7.1c0-.8-.65-1.45-1.45-1.45M42.46 3.87c2.22 0 2.33 4.24 2.33 5.08 0 .85-.11 5.09-2.33 5.09-2.21 0-2.32-4.24-2.32-5.08 0-.86.11-5.09 2.32-5.09m0 13.07c1.76 0 3.23-.93 4.14-2.62.71-1.34 1.1-3.2 1.1-5.36s-.39-4.02-1.1-5.37A4.6 4.6 0 0 0 42.46.97c-1.76 0-3.22.93-4.13 2.62-.72 1.35-1.1 3.2-1.1 5.37s.38 4.01 1.1 5.36a4.59 4.59 0 0 0 4.13 2.62"></path><path fill="#000" d="M51.4.49c-.8 0-1.45.65-1.45 1.45v17.78c-1.93.6-5.75 1.13-10.38 1.13h-2.2a1.45 1.45 0 0 0 0 2.9h2.2c2.64 0 7.21-.23 10.38-1.02v4.84a1.45 1.45 0 0 0 2.9 0V1.94c0-.8-.65-1.45-1.45-1.45"></path></g></svg>
+                        </a>
+                        <a href="" class="btn-app">앱다운로드<span class="app-arrow"></span></a>
+                    </div>
+                    <div class="join">
+                        <a href="" class="btn-login">로그인</a>
+                        <a href="" class="btn-join">회원가입</a>
+                    </div>
+                    <hr class="border-line">
+                    <ul class="sub-menu">
+                        <li class="menu-area">
+                            <a href="" class="depth community">
+                                <div class="wrap"><span class="icon-wrap"><span class="icon"></span></span>커뮤니티</div>
+                                <span class="close-arrow"></span>
+                            </a>
+                            <ul class="menu-list">
+                                <li class="menu-item"><a href="" class="link-sub-menu word-bg">홈</a></li>
+                                <li class="menu-item"><a href="" class="link-sub-menu">팔로잉</a></li>
+                                <li class="menu-item"><a href="" class="link-sub-menu">사진</a></li>
+                                <li class="menu-item"><a href="" class="link-sub-menu">집들이</a></li>
+                                <li class="menu-item"><a href="" class="link-sub-menu">노하우</a></li>
+                                <li class="menu-item"><a href="" class="link-sub-menu">전문가집들이</a></li>
+                                <li class="menu-item"><a href="" class="link-sub-menu">셀프가이드</a></li>
+                                <li class="menu-item"><a href="" class="link-sub-menu">질문과답변</a></li>
+                                <li class="menu-item"><a href="" class="link-sub-menu">3D인테리어</a></li>
+                                <li class="menu-item"><a href="" class="link-sub-menu">이벤트</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-area">
+                            <a href="" class="depth store">
+                                <div class="wrap"><span class="icon-wrap"><span class="icon"></span></span>스토어</div>
+                                <span class="close-arrow"></span>
+                            </a>
+                            <ul class="menu-list">
+                                <li class="menu-item"><a href="" class="link-sub-menu">스토어홈</a></li>
+                                <li class="menu-item"><a href="" class="link-sub-menu">카테고리</a></li>
+                                <li class="menu-item"><a href="" class="link-sub-menu">베스트</a></li>
+                                <li class="menu-item"><a href="" class="link-sub-menu">오늘의딜</a></li>
+                                <li class="menu-item">
+                                    <a href="" class="link-sub-menu">리퍼마켓
+                                    <span class="new-icon">
+                                        <svg class="css-1r7xtnv" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" width="18" height="18"><path d="M0 9a9 9 0 1118 0A9 9 0 010 9z" fill="#fff"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M9 18A9 9 0 109 0a9 9 0 000 18zm-1.7-5.25H5.26v-7.5h2.61l2.8 4.2h.03v-4.2h2.06v7.5h-2.3L7.36 8.07h-.05v4.68z" fill="#F77"></path></svg>
+                                    </span>
+                                    </a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="" class="link-sub-menu">오!굿즈
+                                        <span class="new-icon">
+                                            <svg class="css-1r7xtnv" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" width="18" height="18"><path d="M0 9a9 9 0 1118 0A9 9 0 010 9z" fill="#fff"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M9 18A9 9 0 109 0a9 9 0 000 18zm-1.7-5.25H5.26v-7.5h2.61l2.8 4.2h.03v-4.2h2.06v7.5h-2.3L7.36 8.07h-.05v4.68z" fill="#F77"></path></svg>
+                                        </span>
+                                    </a>
+                               </li>
+                                <li class="menu-item"><a href="" class="link-sub-menu">빠른배송</a></li>
+                                <li class="menu-item">
+                                    <a href="" class="link-sub-menu">프리미엄
+                                        <span class="new-icon">
+                                            <svg class="css-1r7xtnv" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" width="18" height="18"><path d="M0 9a9 9 0 1118 0A9 9 0 010 9z" fill="#fff"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M9 18A9 9 0 109 0a9 9 0 000 18zm-1.7-5.25H5.26v-7.5h2.61l2.8 4.2h.03v-4.2h2.06v7.5h-2.3L7.36 8.07h-.05v4.68z" fill="#F77"></path></svg>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="menu-item"><a href="" class="link-sub-menu">기획전</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-area">
+                            <a href="" class="depth move">
+                                <div class="wrap"><span class="icon-wrap"><span class="icon"></span></span>이사/시공/수리</div>
+                                <span class="close-arrow"></span>
+                            </a>
+                            <ul class="menu-list">
+                                <li class="menu-item"><a href="" class="link-sub-menu">홈</a></li>
+                                <li class="menu-item"><a href="" class="link-sub-menu">인테리어시공</a></li>
+                                <li class="menu-item"><a href="" class="link-sub-menu">이사</a></li>
+                                <li class="menu-item"><a href="" class="link-sub-menu">설치수리</a></li>
+                                <li class="menu-item"><a href="" class="link-sub-menu">우리동네아파트</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <hr class="border-line">
+                    <ul class="category-list">
+                        <li class="category-item">
+                            <a href="" class="link-sub-category">마이페이지
+                                <span class="new-icon">
+                                    <svg class="css-1r7xtnv" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" width="18" height="18"><path d="M0 9a9 9 0 1118 0A9 9 0 010 9z" fill="#fff"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M9 18A9 9 0 109 0a9 9 0 000 18zm-1.7-5.25H5.26v-7.5h2.61l2.8 4.2h.03v-4.2h2.06v7.5h-2.3L7.36 8.07h-.05v4.68z" fill="#F77"></path></svg>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="category-item"><a href="" class="link-sub-category">나의 쇼핑</a></li>
+                        <li class="category-item"><a href="" class="link-sub-category">스크랩북</a></li>
+                        <li class="category-item"><a href="" class="link-sub-category">알림</a></li>
+                        <li class="category-item"><a href="" class="link-sub-category">이벤트</a></li>
+                        <li class="category-item"><a href="" class="link-sub-category">사진 올리기</a></li>
+                        <li class="category-item"><a href="" class="link-sub-category">집들이 글쓰기</a></li>
+                        <li class="category-item"><a href="" class="link-sub-category">노하우 글쓰기</a></li>
+                        <li class="category-item"><a href="" class="link-sub-category">상품 리뷰 쓰기</a></li>
+                        <li class="category-item"><a href="" class="link-sub-category">시공 전문가 리뷰 쓰기</a></li>
+                        <li class="category-item"><a href="" class="link-sub-category">인테리어 질문하기</a></li>
+                        <li class="category-item"><a href="" class="link-sub-category">고객센터</a></li>
+                    </ul>
+                    <hr class="border-line">
+                    <div class="apply">
+                        <a href="" class="link-apply">전문가 신청</a>
+                        <a href="" class="link-apply">판매자 신청</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="container">
+            <section class="sc-visual">
+                <a href="" class="link-visual">
+                    <div class="visual-img">
+                        <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/cards/projects/166286091629881226.jpg?gif=1&w=1700&h=1134&c=c&webp=1" alt="비주얼이미지">
+                    </div>
+                </a>
+                <div class="visual-content">
+                    <h2 class="title">20평대라고요?위시리스트를 실현한 신혼집</h2>
+                    <a href="" class="btn-visual">보러가기</a>
+                </div>
+            </section>
+            <aside class="event">
+                <span class="blind">이벤트영역</span>
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="" class="link-event">
+                                <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/banners/home_banner/166452923732905463.png?gif=1&w=1280&webp=1" alt="이벤트이미지1">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="" class="link-event">
+                                <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/banners/home_banner/166452921984317330.png?gif=1&w=1280&webp=1" alt="이벤트이미지2">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="" class="link-event">
+                                <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/banners/home_banner/166452926129664162.png?gif=1&w=1280&webp=1" alt="이벤트이미지3">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="" class="link-event">
+                                <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/banners/home_banner/164992754983147211.png?gif=1&w=1280&webp=1" alt="이벤트이미지4">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="" class="link-event">
+                                <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/banners/home_banner/166393325613238150.png?gif=1&w=1280&webp=1" alt="이벤트이미지5">
+                            </a>
+                        </div>
+                    </div>
+                    <!--  swiper slide-->
+                </div>
+                <div class="control-box">
+                    <a href="" class="fraction">
+                        <!-- <span class="curr">1</span>
+                        <span class="slach">/</span>
+                        <span class="total">5</span> -->
+                        <!-- <span class="link"></span> -->
+                    </a>
+                </div>
+            </aside> <!-- event -->
+            <section class="sc-category">
+                <h2 class="blind">카테고리영역</h2>
+                <div class="cate-area">
+                    <ul class="cate-list">
+                        <li class="cate-item">
+                            <a href="" class="link-category">
+                                <img src="https://image.ohou.se/image/resize/bucketplace-v2-development/uploads-shortcut-home_feed_shortcut_sets-166485672496321483.png/512/none" alt="쇼핑하기 아이콘">
+                                쇼핑하기
+                            </a>
+                        </li>
+                        <li class="cate-item">
+                            <a href="" class="link-category">
+                                <img src="https://image.ohou.se/image/resize/bucketplace-v2-development/uploads-shortcut-home_feed_shortcut_sets-166553944515073093.png/512/none" alt="의식주축제 아이콘">
+                                의식주축제
+                            </a>
+                        </li>
+                        <li class="cate-item">
+                            <a href="" class="link-category">
+                                <img src="https://image.ohou.se/image/resize/bucketplace-v2-development/uploads-shortcut-home_feed_shortcut_sets-166485696782888460.png/512/none" alt="오늘의딜 아이콘">
+                                오늘의딜
+                            </a>
+                        </li>
+                        <li class="cate-item">
+                            <a href="" class="link-category">
+                                <img src="https://image.ohou.se/image/resize/bucketplace-v2-development/uploads-shortcut-home_feed_shortcut_sets-166556933560554347.png/512/none" alt="오늘뭐하지 아이콘">
+                                오늘뭐하지
+                            </a>
+                        </li>
+                        <li class="cate-item">
+                            <a href="" class="link-category">
+                                <img src="https://image.ohou.se/image/resize/bucketplace-v2-development/uploads-shortcut-home_feed_shortcut_sets-166485744673486167.png/512/none" alt="간편한끼 아이콘">
+                                간편한끼
+                            </a>
+                        </li>
+                        <li class="cate-item">
+                            <a href="" class="link-category">
+                                <img src="https://image.ohou.se/image/resize/bucketplace-v2-development/uploads-shortcut-home_feed_shortcut_sets-166485744334279663.png/512/none" alt="집들이 아이콘">
+                                집들이
+                            </a>
+                        </li>
+                        <li class="cate-item">
+                            <a href="" class="link-category">
+                                <img src="https://image.ohou.se/image/resize/bucketplace-v2-development/uploads-shortcut-home_feed_shortcut_sets-166536291332183981.png/512/none" alt="꿀잼시리즈 아이콘">
+                                꿀잼시리즈
+                            </a>
+                        </li>
+                        <li class="cate-item">
+                            <a href="" class="link-category">
+                                <img src="https://image.ohou.se/image/resize/bucketplace-v2-development/uploads-shortcut-home_feed_shortcut_sets-166485741189749105.png/512/none" alt="빠른배송 아이콘">
+                                빠른배송
+                            </a>
+                        </li>
+                         <li class="cate-item">
+                            <a href="" class="link-category">
+                                <img src="https://image.ohou.se/image/resize/bucketplace-v2-development/uploads-shortcut-home_feed_shortcut_sets-166485741760811131.png/512/none" alt="쉬운이사 아이콘">
+                                쉬운이사
+                            </a>
+                        </li>
+                        <li class="cate-item">
+                            <a href="" class="link-category">
+                                <img src="https://image.ohou.se/image/resize/bucketplace-v2-development/uploads-shortcut-home_feed_shortcut_sets-166485740201992331.png/512/none" alt="리모델링 아이콘">
+                                리모델링
+                            </a>
+                        </li>
+   
+                    </ul>
+                </div>
+            </section> <!-- sc-category -->
+            <section class="sc-story">
+                <h2 class="title">오늘의 스토리</h2>
+                <div class="story-inner">
+                    <div class="story-item">
+                        <a href="" class="link-story">
+                            <div class="story-img"><img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/projects/cover_images/166547089182017751.jpg?gif=1&w=360&h=240&c=c&webp=1" alt=""></div>
+                            <p>마치 비밀서재처럼 취향을 읽고 쓰는 3평 방</p>
+                        </a>
+                    </div>
+                    <div class="story-item">
+                        <a href="" class="link-story">
+                            <div class="story-img"><img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/cards/projects/166255191456216123.JPEG?gif=1&w=360&h=240&c=c&webp=1" alt=""></div>
+                            <p>구축 2Bay 리모델링의 바이블,모던 30평대!</p>
+                        </a>
+                    </div>
+                    <div class="story-item">
+                        <a href="" class="link-story">
+                            <div class="story-img"><img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/projects/cover_images/166057545375923601.jpg?gif=1&w=360&h=240&c=c&webp=1" alt=""></div>
+                            <p>손 뻗으면 닿을 듯한🌳저층 신혼집 리모델링</p>
+                        </a>
+                    </div>
+                    <div class="story-item home-tip">
+                        <a href="" class="link-tip">
+                            <span class="txt">예쁜 집 구경하기</span>
+                            <em class="title">집들이</em>
+                        </a>
+                        <a href="" class="link-tip">
+                            <span class="txt">전문가 시공사례</span>
+                            <em class="title">전문가 집들이</em>
+                        </a>
+                        <a href="" class="link-tip">
+                            <span class="txt">인테리어 꿀팁 총 집합</span>
+                            <em class="title">노하우</em>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <section class="sc-find">
+              <h2 class="title">카테고리별 상품찾기</h2>
+                <div class="find-wrap">
+                    <div class="find-inner">
+                        <ul class="find-list">
+                            <li class="find-item"><a href="" class="link-find"></a>
+                                <div class="find-img"><div class="img-box"><img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/category/store_home_categories/165698403420736265.png?gif=1&w=144&h=144&c=c&webp=1" alt="카테고리 상품이미지"></div></div>
+                                <p class="title">가구</p>
+                            </li>
+                            <li class="find-item"><a href="" class="link-find"></a>
+                                <div class="find-img"><div class="img-box"><img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/category/store_home_categories/166010553870408108.png?gif=1&w=144&h=144&c=c" alt="카테고리 상품이미지"></div></div>
+                                <p class="title">패브릭</p>
+                            </li>
+                            <li class="find-item"><a href="" class="link-find"></a>
+                                <div class="find-img"><div class="img-box"><img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/category/store_home_categories/166072985530266073.png?gif=1&w=144&h=144&c=c" alt="카테고리 상품이미지"></div></div>
+                                <p class="title">가전</p>
+                            </li>
+                            <li class="find-item"><a href="" class="link-find"></a>
+                                <div class="find-img"><div class="img-box"><img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/category/store_home_categories/165043178085627433.png?gif=1&w=144&h=144&c=c" alt="카테고리 상품이미지"></div></div>
+                                <p class="title">유아·아동</p>
+                            </li>
+
+                            <li class="find-item"><a href="" class="link-find"></a>
+                                <div class="find-img"><div class="img-box"><img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/category/store_home_categories/165443713935676588.png?gif=1&w=144&h=144&c=c" alt="카테고리 상품이미지"></div></div>
+                                <p class="title">조명</p>
+                            </li>
+                            <li class="find-item"><a href="" class="link-find"></a>
+                                <div class="find-img"><div class="img-box"><img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/category/store_home_categories/165443714334272236.png?gif=1&w=144&h=144&c=c" alt="카테고리 상품이미지"></div></div>
+                                <p class="title">주방용품</p>
+                            </li>
+                            <li class="find-item"><a href="" class="link-find"></a>
+                                <div class="find-img"><div class="img-box"><img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/category/store_home_categories/162823227719846773.png?gif=1&w=144&h=144&c=c" alt="카테고리 상품이미지"></div></div>
+                                <p class="title">데코·식물</p>
+                            </li>
+                            <li class="find-item"><a href="" class="link-find"></a>
+                                <div class="find-img"><div class="img-box"><img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/category/store_home_categories/165443714917341657.png?gif=1&w=144&h=144&c=c" alt="카테고리 상품이미지"></div></div>
+                                <p class="title">수납·정리</p>
+                            </li>
+
+                            <li class="find-item"><a href="" class="link-find"></a>
+                                <div class="find-img"><div class="img-box"><img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/category/store_home_categories/165519431107541334.png?gif=1&w=144&h=144&c=c" alt="카테고리 상품이미지"></div></div>
+                                <p class="title">생활용품</p>
+                            </li>
+                            <li class="find-item"><a href="" class="link-find"></a>
+                                <div class="find-img"><div class="img-box"><img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/category/store_home_categories/165579048228622395.png?gif=1&w=144&h=144&c=c" alt="카테고리 상품이미지"></div></div>
+                                <p class="title">생필품</p>
+                            </li>
+                            <li class="find-item"><a href="" class="link-find"></a>
+                                <div class="find-img"><div class="img-box"><img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/category/store_home_categories/162823230480918647.png?gif=1&w=144&h=144&c=c" alt="카테고리 상품이미지"></div></div>
+                                <p class="title">공구·DIY</p>
+                            </li>
+                            <li class="find-item"><a href="" class="link-find"></a>
+                                <div class="find-img"><div class="img-box"><img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/category/store_home_categories/162823230908544036.png?gif=1&w=144&h=144&c=c" alt="카테고리 상품이미지"></div></div>
+                                <p class="title">인테리어시공</p>
+                            </li>
+                            <li class="find-item"><a href="" class="link-find"></a>
+                                <div class="find-img"><div class="img-box"><img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/category/store_home_categories/162823231401891024.png?gif=1&w=144&h=144&c=c" alt="카테고리 상품이미지"></div></div>
+                                <p class="title">반려동물</p>
+                            </li>
+                            <li class="find-item"><a href="" class="link-find"></a>
+                                <div class="find-img"><div class="img-box"><img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/category/store_home_categories/165587887120034023.png?gif=1&w=144&h=144&c=c" alt="카테고리 상품이미지"></div></div>
+                                <p class="title">캠핌용품</p>
+                            </li>
+                            <li class="find-item"><a href="" class="link-find"></a>
+                                <div class="find-img"><div class="img-box"><img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/category/store_home_categories/162823231949249287.png?gif=1&w=144&h=144&c=c" alt="카테고리 상품이미지"></div></div>
+                                <p class="title">실내운동</p>
+                            </li>
+                            <li class="find-item"><a href="" class="link-find"></a>
+                                <div class="find-img"><div class="img-box"><img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/category/store_home_categories/165587892849435660.png?gif=1&w=144&h=144&c=c"></div></div>
+                                <p class="title">렌탈</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section><!-- sc-find -->
+            <section class="sc-deal">
+                <h2 class="tlte">오늘의 딜</h2>
+                <div class="deal-area">
+                    <div class="deal-img">
+                        <a href="">
+                            <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/openapi/10489006/1656986715157.jpg?gif=1&w=640&h=640&c=c&q=0.8&webp=1" alt="">
+                        </a>
+                    </div>
+                    <div class="deal-content">
+                        <a href="" class="link-deal">
+                            <em class="date">6일 남음</em>
+                            <p class="today">[오늘의딜]1+1 우드상판 폴딩박스 2colors / 2sizes</p>
+                            <em class="sale">68%</em>
+                            <a href="" class="link-sale">특가 746개 보기<svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor" preserveAspectRatio="xMidYMid meet"><path d="M2.5 8.2L5.63 5 2.5 1.8l.94-.97L7.5 5 3.44 9.17z"></path></svg></a>
+                        </a>
+                    </div>
+                </div>
+            </section><!-- sc-deal-->
+            <section class="sc-photo">
+              <h2 class="title">오늘의 인기사진</h2>
+                 <ul class="photo-list">
+                    <!-- todayphoto.json -->
+                 </ul>
+            </section><!-- photo -->
+            <section class="sc-review">
+                <h2 class="title">유저들의 인테리어 시공리뷰</h2>
+                <div class="review-list">
+                    <div class="review-item">
+                        <a href="" class="link-review">
+                            <div class="review-img">
+                                <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/cards/expert_reviews/161054427824690245.jpg?gif=1&w=1080&h=1080&c=c" alt="리뷰썸네일">
+                            </div>
+                            <div class="review-content">
+                                <span class="star"><svg fill="#35C5F0" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><defs><path id="star-path-1.000" d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z"></path><clipPath id="star-clip-1.000"><rect x="0" y="0" width="24" height="24"></rect></clipPath></defs><use xlink:href="#star-path-1.000" fill="#DBDBDB"></use><use clip-path="url(#star-clip-1.000)" xlink:href="#star-path-1.000"></use></svg><svg fill="#35C5F0" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><defs><path id="star-path-1.000" d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z"></path><clipPath id="star-clip-1.000"><rect x="0" y="0" width="24" height="24"></rect></clipPath></defs><use xlink:href="#star-path-1.000" fill="#DBDBDB"></use><use clip-path="url(#star-clip-1.000)" xlink:href="#star-path-1.000"></use></svg><svg fill="#35C5F0" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><defs><path id="star-path-1.000" d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z"></path><clipPath id="star-clip-1.000"><rect x="0" y="0" width="24" height="24"></rect></clipPath></defs><use xlink:href="#star-path-1.000" fill="#DBDBDB"></use><use clip-path="url(#star-clip-1.000)" xlink:href="#star-path-1.000"></use></svg><svg fill="#35C5F0" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><defs><path id="star-path-1.000" d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z"></path><clipPath id="star-clip-1.000"><rect x="0" y="0" width="24" height="24"></rect></clipPath></defs><use xlink:href="#star-path-1.000" fill="#DBDBDB"></use><use clip-path="url(#star-clip-1.000)" xlink:href="#star-path-1.000"></use></svg><svg fill="#35C5F0" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><defs><path id="star-path-1.000" d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z"></path><clipPath id="star-clip-1.000"><rect x="0" y="0" width="24" height="24"></rect></clipPath></defs><use xlink:href="#star-path-1.000" fill="#DBDBDB"></use><use clip-path="url(#star-clip-1.000)" xlink:href="#star-path-1.000"></use></svg>
+                                </span>
+                                <p class="txt">우선 오늘의 집을 통해 업체 몇곳의 정보를 제공받고 인테리어 업체를 선정하였습니다. 저희 가족의 첫 보금자리이고 평수도 컸고 규모도 컸기 때문에 걱정도 우려도 많은 공사였습니다. 그래서 더욱 꼼꼼하고 때로는 아주 작은 것까지 확인할 수 밖에 없었는데 다행이 끝까지 마무리 잘해주시고 공사후에도 끝까지 A/S와 디테일한 부분도 챙겨주셔서 잘 지내고 있습니다. 겨울에 지내보니 난방 및 샷시 온수등 기초공사가 튼튼히 되어있다고 판단됩니다. 특히 김태익 팀장님 중간에서 고생 많으셨고 감사드립니다. 앞으로도 승승장구 하시기를요^^</p>
+                                <div class="brand">
+                                    <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/users/profile_images/161051395778169699.jpg?gif=1&w=144&webp=1" alt="">(주)앤트아이디
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="review-item">
+                        <a href="" class="link-review">
+                            <div class="review-img">
+                                <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/cards/expert_reviews/164697290720592490.jpg?gif=1&w=1080&h=1080&c=c&webp=1" alt="리뷰썸네일">
+                            </div>
+                            <div class="review-content">
+                                <span class="star"><svg fill="#35C5F0" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><defs><path id="star-path-1.000" d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z"></path><clipPath id="star-clip-1.000"><rect x="0" y="0" width="24" height="24"></rect></clipPath></defs><use xlink:href="#star-path-1.000" fill="#DBDBDB"></use><use clip-path="url(#star-clip-1.000)" xlink:href="#star-path-1.000"></use></svg><svg fill="#35C5F0" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><defs><path id="star-path-1.000" d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z"></path><clipPath id="star-clip-1.000"><rect x="0" y="0" width="24" height="24"></rect></clipPath></defs><use xlink:href="#star-path-1.000" fill="#DBDBDB"></use><use clip-path="url(#star-clip-1.000)" xlink:href="#star-path-1.000"></use></svg><svg fill="#35C5F0" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><defs><path id="star-path-1.000" d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z"></path><clipPath id="star-clip-1.000"><rect x="0" y="0" width="24" height="24"></rect></clipPath></defs><use xlink:href="#star-path-1.000" fill="#DBDBDB"></use><use clip-path="url(#star-clip-1.000)" xlink:href="#star-path-1.000"></use></svg><svg fill="#35C5F0" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><defs><path id="star-path-1.000" d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z"></path><clipPath id="star-clip-1.000"><rect x="0" y="0" width="24" height="24"></rect></clipPath></defs><use xlink:href="#star-path-1.000" fill="#DBDBDB"></use><use clip-path="url(#star-clip-1.000)" xlink:href="#star-path-1.000"></use></svg><svg fill="#35C5F0" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><defs><path id="star-path-1.000" d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z"></path><clipPath id="star-clip-1.000"><rect x="0" y="0" width="24" height="24"></rect></clipPath></defs><use xlink:href="#star-path-1.000" fill="#DBDBDB"></use><use clip-path="url(#star-clip-1.000)" xlink:href="#star-path-1.000"></use></svg>
+                                </span>
+                                <p class="txt">인테리어 한지 1년이 다 되어가는데, 사는게 바쁘다보니 너무 늦게 리뷰를 쓰네요 ㅎㅎ ! 먼저 인테리어전 실측재시러 오셨을땐 제가 없었고 남편이 있었는데, 여러업체 상담을 받아봤지만 이업체로 했으면 좋겠다고 남편이 얘기를 하더라구요..ㅎㅎ 도돼체 실측만 재고갔을뿐인데.. 견적도 안받아보고 왜 이 업체로 하자는소리인지..ㅎㅎ 그이유를 견적받으러갔을때 알게되었습니다:) 일단 왜 이 가격이 그가격이 나왔는지 합리적이게 설명도 잘해주셨고 물론 친절한 상담은 덤이지요 ㅎㅎ 기존에 작업하시는 모습을 사진으로 보여주셨고 왜 여기 업체해서 해야하는지를 알겠더라구요 ㅎㅎ 이때까지 상담받아봤던 업체랑은 확실히 틀리구나 라는걸 느꼈어요~! 한두군데 수리가 아니었고 올수리였기때문에 이왕하는거 비용도 비용이지만 제대로 공사하는업체를 찾고있었는데 여기다 싶어서 바로 그자리에서 계약하겠다고 말씀드리고 나왔어요~ 단톡방을 개설해서 매일매일 어떤작업이 들어가는지 사진도 보여주시고 상세히 설명해주셔서 공사기간동안에도 믿고 맡겨놓으니 마음 편하게 보낼수있었어요. 완성되고나서 주위 인테리어하셨던 분들 초대해서 다 보고가셨는데 요새디자인으로 너무 잘했다고 다들 업체 어디냐며 여쭤보셨고 퀄리티에 비해서 가격도 굉장히 합리적이라고 말씀 많이 주셨어요~! 제가 좀 많이 깐깐한 편이라 그냥 넘어갈수 있는 잔잔한 수리들도 하루이틀 넘기지않고 왠만하면 빠르게 A/S 처리해주셨고 20년 넘은 노후된 아파트라 집 문제 였음 에도 불구하고 늘 죄송하다며 공사를 여러번 해주시기도 하셨어요! 너무 만족하고 있고 주위에서도 다들 여쭤보시고 추천많이 하고있습니다 ㅎㅎ 제가 추천안해도 아마 대성할것 같지만 ㅎㅎ바가지 경쟁업체들이 많을텐데 소신있고 정직하게 작업하시는부분들에 늘 감동이네요! 다들 고민하고계신다면 이업체 무조건 추천드립니다 !! 아마 후회안하실겁니다 ㅎㅎ</p>
+                                <div class="brand">
+                                    <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/users/profile_images/164724051477037451.jpg?gif=1&w=144&webp=1" alt="">(주)디자인그랩(부산,창원)
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="review-item">
+                        <a href="" class="link-review">
+                            <div class="review-img">
+                                <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/cards/expert_reviews/163179984038903687.jpeg?gif=1&w=1080&h=1080&c=c&webp=1" alt="리뷰썸네일">
+                            </div>
+                            <div class="review-content">
+                                <span class="star"><svg fill="#35C5F0" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><defs><path id="star-path-1.000" d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z"></path><clipPath id="star-clip-1.000"><rect x="0" y="0" width="24" height="24"></rect></clipPath></defs><use xlink:href="#star-path-1.000" fill="#DBDBDB"></use><use clip-path="url(#star-clip-1.000)" xlink:href="#star-path-1.000"></use></svg><svg fill="#35C5F0" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><defs><path id="star-path-1.000" d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z"></path><clipPath id="star-clip-1.000"><rect x="0" y="0" width="24" height="24"></rect></clipPath></defs><use xlink:href="#star-path-1.000" fill="#DBDBDB"></use><use clip-path="url(#star-clip-1.000)" xlink:href="#star-path-1.000"></use></svg><svg fill="#35C5F0" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><defs><path id="star-path-1.000" d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z"></path><clipPath id="star-clip-1.000"><rect x="0" y="0" width="24" height="24"></rect></clipPath></defs><use xlink:href="#star-path-1.000" fill="#DBDBDB"></use><use clip-path="url(#star-clip-1.000)" xlink:href="#star-path-1.000"></use></svg><svg fill="#35C5F0" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><defs><path id="star-path-1.000" d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z"></path><clipPath id="star-clip-1.000"><rect x="0" y="0" width="24" height="24"></rect></clipPath></defs><use xlink:href="#star-path-1.000" fill="#DBDBDB"></use><use clip-path="url(#star-clip-1.000)" xlink:href="#star-path-1.000"></use></svg><svg fill="#35C5F0" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><defs><path id="star-path-1.000" d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z"></path><clipPath id="star-clip-1.000"><rect x="0" y="0" width="24" height="24"></rect></clipPath></defs><use xlink:href="#star-path-1.000" fill="#DBDBDB"></use><use clip-path="url(#star-clip-1.000)" xlink:href="#star-path-1.000"></use></svg>
+                                </span>
+                                <p class="txt">진짜 어떻게 감사의 인사를 말해야할지 모르겠어요 제의견을 받아주시기도 또 경험으로 이끌어주시기도하고요 특히 대면형주방으로 바꾸는 공사이고 실용성있는 장사용까지 그리고 아일랜드 확장까지 제가 이쁨까지만 생각했다면 여기서 실용성있게 사용하실수있도록 해주셔서 너무 감사해요 최소 아기가 초등학교 졸업할때까지 살게될집이라 눈에 거슬리는부분을 평생 안고가야할것같아 죄송함을 무릎쓰고 부탁드리면 정말 흔쾌히 다받아주시고 이쁜 집에서 사는게 제꿈이라 전등 줄색깔 헤드색깔마저 신경썼는데 다른줄로 바꿔주시겠다며 하 이건 진짜ㅠㅠ.. 내일이 입주인데 막판에 엄청 큰 이벤트가있어 멘붕이였거든요 저녁시간인데도 불구하고 또 같이 일하시는 분에게 피해아닌 피해를?!ㅠㅠ 부탁하셔서 기간내에 작업 끝내주시려하는마음에 정말 너무 감동이고 감사합니다🤍 믿고 하셔도 될거에요!🤍 거실화장실이 정말 이쁜데 전체샷을 못찍었네용ㅠㅠ</p>
+                                <div class="brand">
+                                    <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/users/profile_images/162607497271622170.JPG?gif=1&w=144&webp=1" alt="">위드디자인
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <a href="" class="link-more-review">인테리어 전문가 더 찾기</a>
+            </section><!-- review-->
+            <section class="sc-plan">
+                <h2 class="title">오늘의 기획전</h2>
+                    <div class="plan-list">
+                        <div class="plan-item">
+                            <a href="" class="link-plan">
+                                <div class="plan-img">
+                                    <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/exhibitions/cover_image/166532618868993291.png?gif=1&w=480&h=320&c=c&webp=1" alt="기획전이미지">
+                                </div>
+                                <div class="plan-content">
+                                    <div class="content">
+                                        <span class="txt">미리 준비하는 따뜻한 겨울</span>
+                                        <strong class="sale">얼리버드 윈터세일 ~80%</strong>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="plan-item">
+                            <a href="" class="link-plan">
+                                <div class="plan-img">
+                                    <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/exhibitions/cover_image/166513293451874463.png?gif=1&w=480&h=320&c=c&webp=1" alt="기획전이미지">
+                                </div>
+                                <div class="plan-content">
+                                    <div class="content">
+                                        <span class="txt">트렌디한 가구만 모아</span>
+                                        <strong class="sale">예쁜 집에 꼭 있는 감성가구 ~64%</strong>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="plan-item">
+                            <a href="" class="link-plan">
+                                <div class="plan-img">
+                                    <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/exhibitions/cover_image/166505688149201015.png?gif=1&w=480&h=320&c=c&webp=1" alt="기획전이미지">
+                                </div>
+                                <div class="plan-content">
+                                    <div class="content">
+                                        <span class="txt">오직 일주일 무제한 쿠폰!</span>
+                                        <strong class="sale">[7일 한정 특가] 10월 월간 인기가구 ~88%</strong>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="plan-item">
+                            <a href="" class="link-plan">
+                                <div class="plan-img">
+                                    <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/exhibitions/cover_image/166512716239733368.png?gif=1&w=480&h=320&c=c&webp=1" alt="기획전이미지">
+                                </div>
+                                <div class="plan-content">
+                                    <div class="content">
+                                        <span class="txt">데일리 필수템 특가 SALE</span>
+                                        <strong class="sale">생필품 슈퍼세일</strong>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="plan-item">
+                            <a href="" class="link-plan">
+                                <div class="plan-img">
+                                    <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/exhibitions/cover_image/166512204039051916.png?gif=1&w=480&h=320&c=c&webp=1" alt="기획전이미지">
+                                </div>
+                                <div class="plan-content">
+                                    <div class="content">
+                                        <span class="txt">좁은 주방이 넓어지는 마법&nbsp;!</span>
+                                        <strong class="sale">&lt;주방살림백과&gt;알뜰살림템 초특가~69% OFF</strong>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                <a href="" class="link-more-plan">오늘의 기획전 더보기</a>
+            </section> <!-- plan -->
+            <section class="sc-premium">
+                <h2 class="title">프리미엄도 오늘의집!</h2>
+                <ul class="premium-list">
+                    <li class="premium-item">
+                        <a href="" class="link-premium">
+                            <div class="premium-img"><img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/productions/165529825500533544.jpg?gif=1&w=480&webp=1" alt="상품이미지" ></div>
+                            <div class="premium-content">
+                                <p class="txt">[빠른배송] 호랑 커트러리 테이블세트</p>
+                                <em class="price">52,000</em>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="premium-item">
+                        <a href="" class="link-premium">
+                            <div class="premium-img"><img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/productions/164177858537529442.png?gif=1&w=480&webp=1" alt="상품이미지" ></div>
+                            <div class="premium-content">
+                                <p class="txt">[빠른배송] 비트라 임스 엘리펀트 스몰 (5 Colors)</p>
+                                <em class="price">147,000</em>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="premium-item">
+                        <a href="" class="link-premium">
+                            <div class="premium-img"><img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/productions/163910958475012868.jpg?gif=1&w=480&webp=1" alt="상품이미지"></div>
+                            <div class="premium-content">
+                                <p class="txt">[해외] Louis Poulsen 판텔라 포터블 테이블 램프/관세 배송비 포함</p>
+                                <em class="price">329,000</em>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="premium-item">
+                        <a href="" class="link-premium">
+                            <div class="premium-img"><img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/productions/165728358852889342.jpg?gif=1&w=480&webp=1" alt="상품이미지"></div>
+                            <div class="premium-content">
+                                <p class="txt">[빠른배송] 프리츠한센 시리즈 7체어</p>
+                                <em class="price">599,500</em>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="premium-item">
+                        <a href="" class="link-premium">
+                            <div class="premium-img"><img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/productions/164969153345026623.jpg?gif=1&w=480&webp=1" alt="상품이미지"></div>
+                            <div class="premium-content">
+                                <p class="txt">데이비드 멜러 프로방살 커틀러리 6종</p>
+                                <em class="price">28,000</em>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="premium-item">
+                        <a href="" class="link-premium">
+                            <div class="premium-img"><img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/productions/164756007996233652.jpg?gif=1&w=480&webp=1" alt="상품이미지"></div>
+                            <div class="premium-content">
+                                <p class="txt">[빠른배송] 카르텔 스몰 고스트 버스터</p>
+                                <em class="price">462,750</em>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </section><!-- premium-->
+            <section class="sc-best">
+                    <h2 class="title">베스트</h2>
+                    <div class="best-cate">
+                        <a href="" class="link-cate active">전체</a>
+                        <a href="" class="link-cate">가구</a>
+                        <a href="" class="link-cate">패브릭</a>
+                        <a href="" class="link-cate">조명</a>
+                        <a href="" class="link-cate">가전</a>
+                        <a href="" class="link-cate">주방용품</a>
+                        <a href="" class="link-cate">데코·식물</a>
+                        <a href="" class="link-cate">수납·정리</a>
+                        <a href="" class="link-cate">생활용품</a>
+                        <a href="" class="link-cate">생필품</a>
+                        <a href="" class="link-cate">공구·DIY</a>
+                        <a href="" class="link-cate">인테리어시공</a>
+                        <a href="" class="link-cate">반려동물</a>
+                        <a href="" class="link-cate">캠핑용품</a>
+                        <a href="" class="link-cate">실내운동</a>
+                        <a href="" class="link-cate">유아·아동</a>
+                        <a href="" class="link-cate">렌탈</a>
+                        <a href="" class="link-cate">식품</a>
+                    </div>             
+                    <ul class="best-list">
+                        <li class="best-item">
+                            <a href="" class="link-best">
+                                <div class="best-img">
+                                    <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/productions/1554432441250_K6wX5dopzz.jpg?gif=1&w=480&webp=1" alt="베스트상품이미지">
+                                    <span class="num">1</span>
+                                </div>
+                                <div class="best-content">
+                                    <p class="txt">Q4 유로탑 롤팩 매트리스 2Size</p>
+                                    <em class="discount">58%</em>
+                                    <em class="price">297,900</em>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="best-item">
+                            <a href="" class="link-best">
+                                <div class="best-img">
+                                    <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/productions/162303132447303472.jpeg?gif=1&w=480&webp=1" alt="베스트상품이미지">
+                                    <span class="num">2</span>
+                                </div>
+                                <div class="best-content">
+                                    <p class="txt">[오늘의딜][5%쿠폰] 비침없는 도톰 레이스/쉬폰커튼(나비주름/핀형/봉집)</p>
+                                    <em class="discount">55%</em>
+                                    <em class="price">19,900</em>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="best-item">
+                            <a href="" class="link-best">
+                                <div class="best-img">
+                                    <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/productions/165580847056056090.jpg?gif=1&w=480&webp=1" alt="베스트상품이미지">
+                                    <span class="num">3</span>
+                                </div>
+                                <div class="best-content">
+                                    <p class="txt">[5%쿠폰]  편안한 제주 필로우탑 본넬스프링 침대 매트리스 (싱글/슈퍼싱글/퀸/킹)</p>
+                                    <em class="discount">57%</em>
+                                    <em class="price">104,900</em>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <a href="" class="link-more-best">베스트셀러 더보기</a>
+            </section><!-- best -->
+            <aside class="add-plus">
+                <a href="" class="add-list">
+                    <div class="add-item">
+                        <p class="title"><svg class="open" width="44" height="18" viewBox="0 0 44 18" preserveAspectRatio="xMidYMid meet"><rect width="44" height="18" fill="#F77" rx="9"></rect><path fill="#FFF" d="M9.49 11.42c1.06 0 1.62-.8 1.62-2.46v-.44c0-1.82-.52-2.56-1.66-2.56-1.08 0-1.64.79-1.64 2.44v.44c0 1.89.56 2.58 1.68 2.58zm-.06 1.78c-2.34 0-4.18-1.29-4.18-4.34v-.3c0-3.1 2.01-4.38 4.25-4.38 2.33 0 4.19 1.28 4.19 4.34v.28c0 3.11-2.02 4.4-4.26 4.4zm8.01-4.62h.9c.9 0 1.21-.41 1.21-1.28 0-.98-.36-1.3-1.16-1.3h-.95v2.58zM15 13.05V4.32h3.63c2.32 0 3.46 1.01 3.46 2.84 0 1.98-1.2 3-3.4 3h-1.24v2.9H15zm8.28 0V4.32h6.03v1.75H25.7v1.67h2.82v1.71H25.7v1.85h3.73v1.75h-6.15zm7.55 0V4.32h2.64L36.3 9.2h.04V4.3h2.08v8.74H36.1l-3.12-5.44h-.06v5.44h-2.08z"></path></svg>전문가가입신청<svg class="arrow" width="1em" height="1em" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"><path fill="currentColor" fill-rule="nonzero" d="M6 19.692L8.25 22 18 12 8.25 2 6 4.308 13.5 12z"></path></svg></p>
+                        <p class="txt">인테리어 전문가님! 오늘의집과 함께하세요</p>
+                    </div>
+                </a>
+                <a href="" class="add-list">
+                    <div class="add-item">
+                        <p class="title">사업자 구매 회원 전환<svg class="arrow" width="1em" height="1em" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"><path fill="currentColor" fill-rule="nonzero" d="M6 19.692L8.25 22 18 12 8.25 2 6 4.308 13.5 12z"></path></svg></p>
+                        <p class="txt">사업자 회원에게 구매 시 혜택을 드립니다</p>
+                    </div>
+                </a>
+            </aside> <!-- add-plus -->
+        </main> <!-- main-->
+
+        <footer class="footer">
+            <section class="footer-top">
+                <h3 class="blind">회사소개영역</h3>
+                <a href="" class="link-cs">고객센터<span class="cs-arrow"></span></a>
+                <p class="tel"><a href="tel:1670-0876" class="link-tel">1670-0876</a></p>
+                <p class="cs-info">09:00~18:00 (주말, 공휴일은 오늘의집 직접배송 및 이사/시공/수리 문의에 한해 전화 상담 가능)</p>
+                <div class="sns">
+                    <a href="" class="link-sns" ><span class="blind">애플사이트</span>
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" class="css-40f4ru"><path d="M20.4421 2C20.6081 3.509 20.0101 4.996 19.1361 6.089C18.2241 7.165 16.7651 7.988 15.3441 7.882C15.1581 6.43 15.8781 4.886 16.6841 3.944C17.5951 2.875 19.1771 2.056 20.4421 2Z" fill="#2F3438"></path><path d="M25.0939 10.7049C24.9354 10.7995 22.3073 12.3681 22.3361 15.567C22.3691 19.43 25.7151 20.707 25.7561 20.721C25.7361 20.811 25.2321 22.564 23.9771 24.344C22.9291 25.911 21.8311 27.443 20.0871 27.471C19.258 27.4901 18.6981 27.2517 18.1148 27.0032C17.5062 26.7441 16.8721 26.474 15.8801 26.474C14.8284 26.474 14.1661 26.7527 13.5274 27.0215C12.9752 27.2539 12.4406 27.4789 11.6871 27.51C10.0261 27.571 8.7571 25.837 7.6711 24.284C5.5001 21.113 3.8101 15.348 6.0761 11.425C7.1741 9.501 9.1761 8.262 11.3161 8.229C12.2585 8.20974 13.1623 8.57291 13.9546 8.89128C14.5605 9.13474 15.1012 9.352 15.5441 9.352C15.9331 9.352 16.4586 9.14343 17.0711 8.90033C18.0364 8.51722 19.2177 8.04836 20.4211 8.175C21.2441 8.199 23.5861 8.5 25.0971 10.703L25.0939 10.7049Z" fill="#2F3438"></path></svg>
+                    </a>
+                    <a href="" class="link-sns"><span class="blind">플레이스토어</span>
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" class="css-40f4ru"><path d="M4 3.80078C4 3.38215 4.07797 3.02846 4.21819 2.74808L16.3199 14.8498L4.21819 26.9515C4.07797 26.6711 4 26.3174 4 25.8988V3.80078Z" fill="#2F3438"></path><path d="M4.95817 27.6257C5.39093 27.7756 5.93793 27.7016 6.53119 27.3638L20.7369 19.2667L17.027 15.5569L4.95817 27.6257Z" fill="#2F3438"></path><path d="M17.7341 14.8498L21.6376 18.7533L25.9562 16.2918C27.3479 15.4988 27.3479 14.2008 25.9562 13.4068L21.6378 10.9461L17.7341 14.8498Z" fill="#2F3438"></path><path d="M20.7369 10.4328L6.53119 2.33578C6.13094 2.10784 5.75174 2 5.41448 2C5.25184 2 5.09896 2.02508 4.95817 2.07385L17.027 14.1427L20.7369 10.4328Z" fill="#2F3438"></path></svg>
+                    </a>
+                    <a href="" class="link-sns"><span class="blind">카카오스토리</span>
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" class="css-40f4ru"><path d="M19.0218 6H10.9785C10.4381 6 10 6.41655 10 6.93071V15.0895C10 15.6034 10.4381 16.02 10.9785 16.02H14.6868C14.6612 16.9276 14.2759 17.9228 13.6902 18.7928C13.1256 19.631 12.1975 20.4568 11.694 20.8516C11.681 20.8619 11.6682 20.8718 11.6561 20.8813C11.5474 20.9805 11.4682 21.0958 11.4665 21.2555C11.4648 21.3767 11.5309 21.4705 11.6044 21.5699L11.6233 21.5903L14.1907 24.3446C14.1907 24.3446 14.3162 24.4709 14.4199 24.4948C14.5371 24.5217 14.6696 24.525 14.7615 24.4573C19.2399 21.1617 19.8868 17.0294 19.9993 14.793C19.9995 14.7802 20 6.93071 20 6.93071C20 6.41655 19.5623 6 19.0218 6Z" fill="#828C94"></path></svg>
+                    </a>
+                    <a href="" class="link-sns"><span class="blind">페이스북</span>
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" class="css-40f4ru"><path d="M16.6667 26V15H20V11.6154H16.6667V9.07692C16.6546 8.32134 16.7461 7.79153 18.3333 7.38462H20V4H16.6667C13.4663 4 12.2153 5.83909 12.5 9.07692V11.6154H10V15H12.5V26H16.6667Z" fill="#828C94"></path></svg>
+                    </a>
+                    <a href="" class="link-sns"><span class="blind">인스타그램</span>
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" class="css-40f4ru"><path d="M8.83977 15C8.83977 11.5978 11.5978 8.83977 15 8.83977C18.4022 8.83977 21.1602 11.5978 21.1602 15C21.1602 18.4022 18.4022 21.1602 15 21.1602C11.5978 21.1602 8.83977 18.4022 8.83977 15ZM15 18.9988C17.2084 18.9988 18.9988 17.2084 18.9988 15C18.9988 12.7916 17.2084 11.0012 15 11.0012C12.7916 11.0012 11.0012 12.7916 11.0012 15C11.0012 17.2084 12.7916 18.9988 15 18.9988Z" fill="#828C94"></path><path d="M21.4036 10.036C22.1987 10.036 22.8431 9.39144 22.8431 8.59639C22.8431 7.80134 22.1987 7.15686 21.4036 7.15686C20.6086 7.15686 19.9641 7.80134 19.9641 8.59639C19.9641 9.39144 20.6086 10.036 21.4036 10.036Z" fill="#828C94"></path><path d="M15 3.00377C11.742 3.00377 11.3335 3.01758 10.054 3.07596C8.7771 3.13425 7.9051 3.33701 7.142 3.63358C6.35315 3.94015 5.68415 4.35034 5.01724 5.01724C4.35034 5.68415 3.94015 6.35315 3.63358 7.14201C3.33701 7.9051 3.13424 8.7771 3.07596 10.054C3.01758 11.3335 3.00381 11.742 3.00381 15C3.00381 18.258 3.01758 18.6665 3.07596 19.946C3.13424 21.2229 3.33701 22.0949 3.63358 22.858C3.94015 23.6468 4.35034 24.3159 5.01724 24.9828C5.68415 25.6497 6.35315 26.0599 7.142 26.3664C7.9051 26.663 8.7771 26.8658 10.054 26.9241C11.3335 26.9824 11.742 26.9962 15 26.9962C18.258 26.9962 18.6665 26.9824 19.946 26.9241C21.2229 26.8658 22.0949 26.663 22.858 26.3664C23.6469 26.0599 24.3159 25.6497 24.9828 24.9828C25.6497 24.3159 26.0599 23.6469 26.3664 22.858C26.663 22.0949 26.8658 21.2229 26.9241 19.946C26.9824 18.6665 26.9962 18.258 26.9962 15C26.9962 11.742 26.9824 11.3335 26.9241 10.054C26.8658 8.7771 26.663 7.9051 26.3664 7.14201C26.0599 6.35315 25.6497 5.68415 24.9828 5.01724C24.3159 4.35034 23.6469 3.94015 22.858 3.63358C22.0949 3.33701 21.2229 3.13425 19.946 3.07596C18.6665 3.01758 18.258 3.00377 15 3.00377ZM15 5.16529C18.2031 5.16529 18.5825 5.17748 19.8475 5.2352C21.0171 5.28858 21.6523 5.48401 22.0751 5.64825C22.635 5.86586 23.0346 6.12586 23.4544 6.54563C23.8741 6.96539 24.1341 7.36506 24.3517 7.92496C24.516 8.34772 24.7114 8.98291 24.7648 10.1525C24.8225 11.4175 24.8347 11.7969 24.8347 15C24.8347 18.2032 24.8225 18.5825 24.7648 19.8475C24.7114 21.0171 24.516 21.6523 24.3517 22.0751C24.1341 22.635 23.8741 23.0346 23.4544 23.4544C23.0346 23.8742 22.635 24.1342 22.0751 24.3517C21.6523 24.516 21.0171 24.7114 19.8475 24.7648C18.5827 24.8225 18.2033 24.8347 15 24.8347C11.7967 24.8347 11.4173 24.8225 10.1525 24.7648C8.98291 24.7114 8.34772 24.516 7.925 24.3517C7.36505 24.1342 6.96539 23.8742 6.54562 23.4544C6.12586 23.0346 5.86586 22.635 5.64829 22.0751C5.48401 21.6523 5.28858 21.0171 5.2352 19.8475C5.17748 18.5825 5.16529 18.2032 5.16529 15C5.16529 11.7969 5.17748 11.4175 5.2352 10.1525C5.28858 8.98291 5.48401 8.34772 5.64829 7.92496C5.86586 7.36506 6.12586 6.96539 6.54562 6.54563C6.96539 6.12586 7.36505 5.86586 7.925 5.64825C8.34772 5.48401 8.98291 5.28858 10.1525 5.2352C11.4175 5.17748 11.7969 5.16529 15 5.16529Z" fill="#828C94"></path></svg>
+                    </a>
+                    <a href="" class="link-sns"><span class="blind">네이버블로그</span>
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" class="css-40f4ru"><path d="M9.01887 11.8896C8.86199 11.8892 8.70853 11.9355 8.57793 12.0224C8.44733 12.1093 8.34545 12.233 8.28519 12.3779C8.22493 12.5227 8.20899 12.6822 8.2394 12.8361C8.26981 12.99 8.3452 13.1315 8.45602 13.2425C8.56684 13.3536 8.70812 13.4292 8.86196 13.46C9.01581 13.4907 9.17531 13.4751 9.32029 13.4151C9.46526 13.3552 9.58919 13.2535 9.67639 13.1231C9.76358 12.9927 9.81012 12.8393 9.81012 12.6824C9.81012 12.4724 9.72681 12.271 9.57847 12.1224C9.43013 11.9737 9.22887 11.89 9.01887 11.8896Z" fill="#828C94"></path><path d="M16.842 11.8083C16.6733 11.8083 16.5083 11.8584 16.368 11.9522C16.2277 12.046 16.1183 12.1793 16.0538 12.3353C15.9893 12.4912 15.9725 12.6628 16.0056 12.8283C16.0386 12.9938 16.12 13.1458 16.2395 13.265C16.3589 13.3843 16.5111 13.4654 16.6766 13.4981C16.8422 13.5308 17.0138 13.5137 17.1696 13.4489C17.3254 13.3841 17.4585 13.2745 17.5521 13.134C17.6456 12.9935 17.6954 12.8285 17.695 12.6597C17.6946 12.4337 17.6045 12.2172 17.4446 12.0576C17.2847 11.898 17.068 11.8083 16.842 11.8083Z" fill="#828C94"></path><path d="M23.9227 4.01764H7.07728C6.26114 4.01764 5.47842 4.34185 4.90131 4.91895C4.32421 5.49606 4 6.27877 4 7.09492V17.0936C4 17.9098 4.32421 18.6925 4.90131 19.2696C5.47842 19.8467 6.26114 20.1709 7.07728 20.1709H13.0271L15.0499 24.938C15.0499 24.938 15.1897 25.3523 15.5276 25.3523C15.8639 25.3523 16.0037 24.938 16.0037 24.938L18.0281 20.1709H23.9227C24.3268 20.1709 24.727 20.0913 25.1003 19.9367C25.4737 19.782 25.8129 19.5554 26.0987 19.2696C26.3844 18.9839 26.6111 18.6446 26.7658 18.2713C26.9204 17.8979 27 17.4978 27 17.0936V7.09492C27 6.6908 26.9204 6.29065 26.7658 5.91729C26.6111 5.54394 26.3844 5.20471 26.0987 4.91895C25.8129 4.6332 25.4737 4.40653 25.1003 4.25188C24.727 4.09723 24.3268 4.01764 23.9227 4.01764ZM11.2253 12.8563C11.2155 14.6841 9.32594 14.7361 9.32594 14.7361C9.11332 14.7356 8.90299 14.6922 8.70755 14.6084C8.51212 14.5247 8.33561 14.4023 8.18861 14.2487V14.5737H6.81245V8.90652C6.89856 8.91952 8.18861 8.90652 8.18861 8.90652V11.0772C8.51356 10.5248 9.44942 10.5345 9.44942 10.5345C11.4804 10.7214 11.2253 12.8563 11.2253 12.8563ZM13.6494 10.7051V14.5915H12.3074V10.7441C12.3074 10.2209 11.6575 10.0747 11.6575 10.0747V8.71805C13.8038 8.80578 13.6494 10.7051 13.6494 10.7051ZM16.842 14.7394C15.5942 14.7394 14.5836 13.8084 14.5836 12.6597C14.5836 11.511 15.5942 10.5816 16.842 10.5816C18.0899 10.5816 19.1005 11.5126 19.1005 12.6597C19.1005 13.8068 18.0899 14.7394 16.842 14.7394ZM24.2217 14.7394C24.2217 14.7394 24.2412 16.7135 22.2346 16.7135H21.6253V15.4348H21.9925C21.9925 15.4348 22.8358 15.5128 22.826 14.213C22.826 14.213 22.6635 14.7394 21.4791 14.7394C21.4791 14.7394 19.8023 14.6192 19.8023 12.983V12.3624C19.8023 12.3624 19.8413 10.6661 21.6822 10.5313C21.9056 10.5159 22.1293 10.5556 22.3339 10.6468C22.5384 10.738 22.7174 10.878 22.8553 11.0544V10.6369H24.2217V14.7394Z" fill="#828C94"></path><path d="M22.0802 11.8278C21.9153 11.8278 21.7541 11.8767 21.617 11.9684C21.4799 12.0601 21.3731 12.1903 21.31 12.3427C21.247 12.4951 21.2306 12.6628 21.2629 12.8245C21.2952 12.9862 21.3747 13.1348 21.4914 13.2513C21.6082 13.3678 21.7568 13.447 21.9186 13.479C22.0804 13.511 22.248 13.4942 22.4003 13.4309C22.5526 13.3676 22.6827 13.2605 22.774 13.1232C22.8654 12.9859 22.914 12.8246 22.9137 12.6597C22.9133 12.4389 22.8253 12.2273 22.669 12.0714C22.5128 11.9154 22.301 11.8278 22.0802 11.8278Z" fill="#828C94"></path></svg>
+                    </a>
+                    <a href="" class="link-sns"><span class="blind">네이버포스트</span>
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" class="css-40f4ru"><path d="M8.5 5H21.5V18H8.5V5ZM15.9535 8.99998V11.5228L14.054 8.99998H12V14H14.0469V11.4772L15.9468 14H18V8.99998H15.9535Z" fill="#828C94"></path><path d="M8.5 19H21.5L19.0623 22H10.9373L8.5 19Z" fill="#828C94"></path><path d="M11.7497 23H18.2497L14.9995 27L11.7497 23Z" fill="#828C94"></path></svg>
+                    </a>
+                </div>
+            </section>
+            <nav class="footer-category">
+                <a href="" class="link-site">브랜드스토리</a>
+                <a href="" class="link-site">회사소개</a>
+                <a href="" class="link-site">채용정보</a>
+                <a href="" class="link-site">이용약관</a>
+                <a href="" class="link-site" style="font-weight: 700;
+                ">개인정보처리방침</a>
+                <a href="" class="link-site">공지사항</a>
+                <a href="" class="link-site">고객센터</a>
+                <a href="" class="link-site">고객의 소리</a>
+                <a href="" class="link-site">전문가 등록</a>
+                <a href="" class="link-site">사업자 구매회원</a>
+                <a href="" class="link-site">제휴/광고 문의</a>
+                <a href="" class="link-site">입점신청 문의</a>
+                <a href="" class="link-site">안전거래센터</a>
+                <a href="" class="link-site">상품광고 소개</a>
+            </nav>
+            <address class="footer-bottom">
+                <p>상호명:(주)버킷플레이스</p>
+                <p>이메일:(고객문의) cs@bucketplace.net (제휴문의) contact@bucketplace.net</p>
+                <p>대표이사:이승재</span>
+                <p>사업자등록번호 :119-86-91245</p>
+                <p>통신판매업신고번호 :제2018-서울서초-0580호<span style="font-weight: 700;">사업자정보확인</span></p>
+                <p>주소 :서울 서초구 서초대로74길 4 삼성생명서초타워 25층, 27층</p>
+                <p>우리은행 채무지급보증안내 :(주)버킷플레이스는 고객님이 현금결제한 금액에 대해 우리은행과 채무지급보증 계약을 체결하여 안전거래를 보장하고 있습니다.<span style="font-weight: 700;">서비스가입사실확인</span></p>
+                <p class="info">오늘의집은 개별 판매자가 상품을 판매하는 오픈마켓이며 (주)버킷플레이스는 통신판매중개자로 거래 당사자가 아니므로, 판매자가 등록한 상품정보 및 거래 등에 대해 일체 책임을 지지 않습니다.
+                단 ㈜버킷플레이스가 판매자로 등록 판매한 상품의 경우는 판매자로서 책임을 부담합니다.</p>
+                <p class="copyright">Copyright 2014. bucketplace, Co., Ltd. All rights reserved</p>
+            </address>
+            <div class="mark"> 
+                <div class="mark-left">
+                    <img src="https://assets.ohou.se/design-system/8f5b2c2e98ea1196.png" alt="">
+                    <div class="mark-content">
+                        <p>ISMS 정보보호 관리체계 인증</p>
+                        <p>2021. 09. 08 ~ 2024. 09. 07</p>
+                    </div>
+                </div>
+                <img src="https://assets.ohou.se/design-system/d5fb816a58bb6a06.png" alt="">
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
